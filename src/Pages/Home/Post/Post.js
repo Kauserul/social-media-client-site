@@ -29,7 +29,7 @@ const Post = () => {
               text: text,
               photo: data.data.url
             }
-            fetch('http://localhost:5000/post', {
+            fetch('https://social-media-server-ruddy.vercel.app/', {
               method: 'POST',
               headers:{
                 'content-type': 'application/json'
@@ -57,7 +57,7 @@ const Post = () => {
         <br />
         <input type='file' className='mb-2' {...register("photo")}></input>
         <br />
-        <button className='btn btn-primary btn-sm'>Submit</button>
+        <button className='btn btn-primary btn-sm'>Post</button>
       </form>
     </div>
   )
